@@ -89,6 +89,8 @@
         if (confirm("คุณยังไม่ได้เพิ่ม Bot เป็นเพื่อน จะเพิ่มเลยไหม?")) {
           window.location = "https://line.me/R/ti/p/@405cnjlw"
         }
+      } else {
+        openWindow()
       }
     }
 
@@ -147,7 +149,6 @@
           getContext()
           getFriendship()
           createUniversalLink()
-          openWindow()
         } else {
           liff.login()
         }
