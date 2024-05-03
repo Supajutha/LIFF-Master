@@ -14,7 +14,11 @@
         window.location = URL + param
       } else {
         if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
-          window.location = 'https://line.me/R/ti/p/@405cnjlw'
+          //window.location = 'https://line.me/R/ti/p/@405cnjlw'
+          liff.openWindow({
+            url: "https://line.me/R/ti/p/@405cnjlw",
+            external: true
+          })
         }
       }
     }
