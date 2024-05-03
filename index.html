@@ -4,14 +4,14 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function getFriendship() {
-      const friend = await liff.getFriendship();
+      const friend = await liff.getFriendship()
       if (!friend.friendFlag) {
         if (
           confirm(
             'กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป'
           )
         ) {
-          window.location = 'https://line.me/R/ti/p/@424vukix';
+          window.location = 'https://line.me/R/ti/p/@424vukix'
         }
       } else {
         liff.openWindow({
@@ -25,14 +25,15 @@
     async function main() {
       liff.ready.then(() => {
         if (liff.isLoggedIn()) {
-          getFriendship();
+          getFriendship()
+          liff.closeWindow()
         } else {
-          liff.login();
+          liff.login()
         }
       });
-      await liff.init({ liffId: '2004757243-36584QdN' });
+      await liff.init({ liffId: '2004757243-36584QdN' })
     }
-    main();
+    main()
   </script>
 </body>
 
