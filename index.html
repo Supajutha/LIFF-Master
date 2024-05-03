@@ -5,16 +5,13 @@
   <script>
     async function getFriendship() {
       const friend = await liff.getFriendship()
-      if (!friend.friendFlag) {
-        if (
-          confirm(
-            'กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป'
-          )
-        ) {
+      if (friend.friendFlag) {
+        window.location = 'https://whatwebcando.today'
+
+      } else {
+        if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
           window.location = 'https://line.me/R/ti/p/@405cnjlw'
         }
-      } else {
-        window.location = 'https://www.example.com'
       }
     }
 
