@@ -9,16 +9,14 @@
       const item = new URLSearchParams(queryString);
       const param = item.get('item')
       const redirectUrl = 'https://www.royalchitraladaprojects.org/'
+      const lineId = '@405cnjlw'
+      const liffInfo = '2004757243-36584QdN'
 
       if (friend.friendFlag) {
         window.location = redirectUrl + param
       } else {
         if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
-          liff.openWindow({
-            url: 'https://line.me/R/ti/p/@405cnjlw',
-            external: true,
-            redirectUri: redirectUrl + param
-          })
+          window.location = 'https://line.me/R/ti/p/' + lineId
         } else {
           liff.closeWindow()
         }
@@ -33,7 +31,7 @@
           liff.login()
         }
       });
-      await liff.init({ liffId: '2004757243-36584QdN' })
+      await liff.init({ liffId: liffInfo })
     }
     main()
   </script>
