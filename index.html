@@ -5,9 +5,13 @@
   <script>
     async function getFriendship() {
       const friend = await liff.getFriendship()
-      if (friend.friendFlag) {
-        window.location = 'https://whatwebcando.today'
+      const queryString = decodeURIComponent(window.location.search);
+      const item = new URLSearchParams(queryString);
+      const param = item.get('item')
+      const URL = 'https://www.royalchitraladaprojects.org/'
 
+      if (friend.friendFlag) {
+        window.location = URL + param
       } else {
         if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
           window.location = 'https://line.me/R/ti/p/@405cnjlw'
