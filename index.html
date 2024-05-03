@@ -8,16 +8,16 @@
       const queryString = decodeURIComponent(window.location.search);
       const item = new URLSearchParams(queryString);
       const param = item.get('item')
-      const URL = 'https://www.royalchitraladaprojects.org/'
+      const redirectUrl = 'https://www.royalchitraladaprojects.org/'
 
       if (friend.friendFlag) {
-        window.location = URL + param
+        window.location = redirectUrl + param
       } else {
         if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
           liff.openWindow({
             url: 'https://line.me/R/ti/p/@405cnjlw',
             external: true,
-            redirectUri: URL + param
+            redirectUri: redirectUrl + param
           })
         } else {
           liff.closeWindow()
