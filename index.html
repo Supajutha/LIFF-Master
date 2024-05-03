@@ -15,8 +15,7 @@
         }
       } else {
         liff.openWindow({
-          url: 'https://www.royalchitraladaprojects.org/product-category/wax-candle/',
-          external: false,
+          redirectUri: "https://www.royalchitraladaprojects"
         });
       }
       liff.closeWindow();
@@ -26,7 +25,6 @@
       liff.ready.then(() => {
         if (liff.isLoggedIn()) {
           getFriendship()
-          liff.closeWindow()
         } else {
           liff.login()
         }
