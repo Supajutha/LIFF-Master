@@ -1,7 +1,7 @@
 <html>
 
 <body>
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src='https://static.line-scdn.net/liff/edge/2/sdk.js'></script>
   <script>
     async function getFriendship() {
       const friend = await liff.getFriendship()
@@ -14,11 +14,11 @@
         window.location = URL + param
       } else {
         if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
-          //window.location = 'https://line.me/R/ti/p/@405cnjlw'
           liff.openWindow({
-            url: "https://line.me/R/ti/p/@405cnjlw",
-            external: false
+            url: 'https://line.me/R/ti/p/@405cnjlw'
           })
+        } else {
+          liff.closeWindow()
         }
       }
     }
