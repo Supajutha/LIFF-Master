@@ -15,7 +15,9 @@
       } else {
         if (confirm('กรุณาเพิ่มเพื่อน LINE Official Account ก่อนเพื่อดำเนินการต่อไป')) {
           liff.openWindow({
-            url: 'https://line.me/R/ti/p/@405cnjlw'
+            url: 'https://line.me/R/ti/p/@405cnjlw',
+            external: true,
+            redirectUri: URL + param
           })
         } else {
           liff.closeWindow()
